@@ -208,19 +208,20 @@
       box-shadow: 0 8px 28px rgba(0,0,0,0.07);
     }
     .card-thumb {
-      height: 200px;
+      height: 225px;
       background: var(--surface);
+      /* replace with: background-image: url('your-image.jpg'); background-size: cover; */
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75rem 0rem;
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
-    .card-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
+    /* Give each card a slightly different placeholder color */
+    .project-card:nth-child(2) .card-thumb { background: #e4ddd3; }
+    .project-card:nth-child(3) .card-thumb { background: #dde4d3; }
     .card-body { padding: 1.25rem 1.5rem 1.5rem; }
     .card-label {
       font-size: 0.7rem;
@@ -365,61 +366,7 @@
 </head>
 <body>
 
-  <!-- ── Navigation ─────────────────────────────── -->
-  <nav>
-    <span class="nav-name">Ulia Zaman</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Work</a></li>
-      <!-- <li><a href="#experience">Experience</a></li> -->
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <!-- ── Hero ──────────────────────────────────── -->
-    <section id="hero">
-      <div class="container" style="display:contents">
-        <!-- unwrap grid into container -->
-      </div>
-    </section>
-
-    <!-- Hero uses full container width as a grid -->
-    <div style="max-width:var(--max-w); margin:0 auto; padding:5rem var(--gutter) 4rem; display:grid; grid-template-columns:1fr auto; align-items:start; gap:3rem;">
-      <div class="hero-text reveal">
-        <h1>Hi, I'm <em>Ulia Zaman</em></h1>
-        <!-- <p>A short, punchy sentence about what you do and what you care about. Keep it human and specific to you.</p> -->
-        <div class="hero-links">
-          <!-- <a href="#projects" class="btn btn-primary">View my work</a> -->
-          <!-- <a href="resume.pdf" class="btn btn-ghost" target="_blank">Resume ↗</a> -->
-        </div>
-      </div>
-      <!-- Replace the div below with <img src="your-photo.jpg" alt="Your Name" class="hero-photo" /> -->
-      <div class="hero-photo reveal" style="animation-delay:0.15s" aria-hidden="true"></div>
-    </div>
-
-    <!-- ── About ──────────────────────────────────── -->
-    <section id="about">
-      <div class="container reveal">
-        <p class="section-label">About</p>
-        <h2>A bit more about me and what I do.</h2>
-        <p>
-          I'm a second-year PhD student in Computational Media at UC Santa Cruz, 
-          where I research games, players, and AI at the Game User Interaction and Intelligence Lab. 
-          My work sits at the intersection of human-computer interaction, AI, and education — 
-          specifically, how people learn to understand and critically engage with AI-generated content, 
-          and how game-based learning environments can support that process. 
-          My current dissertation research focuses on AI literacy: examining whether existing frameworks 
-          account for generative AI modalities like text, image, and video, and how gameplay mechanics 
-          and metacognitive scaffolding shape learners' ability to navigate AI-generated media.
-        </p>
-        <div class="skills-row">
-          <!-- Replace these with your actual skills -->
-          <!-- <span class="tag">User Research</span>
-          <span class="tag">Data Analysis</span> -->
-        </div>
-      </div>
-    </section>
 
     <!-- ── Projects ────────────────────────────────── -->
     <section id="projects">
@@ -430,7 +377,7 @@
           <!-- Project Card 1 -->
           <article class="project-card reveal">
             <div class="card-thumb">
-              <img src="d&s.png" alt="Day & Sea project">
+              <img src="d&s.png" alt="Project title" style="width:100%; height:100%; object-fit:contain; background:white;">
             </div>
             <div class="card-body">
               <p class="card-label">2024 - 2025</p>
@@ -454,7 +401,7 @@
           <!-- Project Card 2 -->
           <article class="project-card reveal">
             <div class="card-thumb">
-              <img src="creativity_labs_logo.png" alt="Creativity Labs logo">
+              <img src="creativity_labs_logo.png" alt="Project title"  style="width:100%; height:100%; object-fit:contain; padding:1.5rem;">
             </div>
             <div class="card-body">
               <p class="card-label">2023</p>
@@ -479,7 +426,7 @@
           <!-- Project Card 3 -->
           <article class="project-card reveal">
             <div class="card-thumb">
-              <img src="mario.gif" alt="Mario RL agent">
+              <img src="mario.gif" alt="Project title"  style="width:100%; height:100%; object-fit:contain; padding:1.5rem;">
             </div>
             <div class="card-body">
               <p class="card-label">2023</p>
@@ -504,77 +451,7 @@
         </div>
       </div>
     </section>
-
-    <!-- ── Experience ───────────────────────────────── -->
-    <!-- <section id="experience">
-      <div class="container">
-        <h2 class="reveal">Experience</h2>
-        <div class="timeline">
-
-          <div class="timeline-item reveal">
-            <span class="timeline-date">2023 – Present</span>
-            <div class="timeline-content">
-              <h3>Job Title</h3>
-              <p class="org">Company Name · City</p>
-              <p>One or two sentences about your responsibilities and key impact. What did you build, ship, or improve?</p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <span class="timeline-date">2021 – 2023</span>
-            <div class="timeline-content">
-              <h3>Previous Job Title</h3>
-              <p class="org">Previous Company · City</p>
-              <p>Same format — role, impact, anything notable.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <span class="timeline-date">2017 – 2021</span>
-            <div class="timeline-content">
-              <h3>Degree in Your Field</h3>
-              <p class="org">University Name</p>
-              <p>Optional: thesis topic, notable projects, awards, or activities.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section> -->
-
-    <!-- ── Contact ──────────────────────────────────── -->
-    <section id="contact">
-      <div class="container reveal">
-        <h2>Let's talk.</h2>
-        <p>Open to new opportunities, collaborations, or just an interesting conversation.</p>
-        <a href="mailto:uzaman@ucsc.edu" class="btn btn-primary">Say hello ↗</a>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/uliazaman/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/uliazaman02" target="_blank">GitHub</a>
-          <!-- add/remove as needed -->
-          <!-- <a href="https://twitter.com/yourhandle" target="_blank">X / Twitter</a> -->
-          <!-- <a href="https://scholar.google.com/..." target="_blank">Google Scholar</a> -->
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- ── Footer ─────────────────────────────────── -->
-  <footer>
-    <span>© <span id="year"></span> Ulia Zaman</span>
-    <span>Built with HTML & ♥</span>
-  </footer>
-
-  <script>
-    // Auto-update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll-reveal
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.12 }
-    );
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
