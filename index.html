@@ -429,6 +429,31 @@
           <!-- Project Card 1 -->
           <article class="project-card reveal">
             <div class="card-thumb">
+              <img src="images/leai.png" alt="LEAI">
+            </div>
+            <div class="card-body">
+              <p class="card-label">2025</p>
+              <h3>Listening with Language Models: Using LLMs to Collect and Interpret Classroom Feedback</h3>
+              <p><em>LLMs · Conversational AI · Learning analytics</em></p>
+              <p>This project explores the use of LLM-powered chatbots as an alternative to traditional end-of-quarter surveys, engaging students in reflective, conversational dialogues mid-course. The result is a three-part system: PromptDesigner, which allows instructors to craft and test course-specific feedback prompts; FeedbackCollector, a student-facing GPT-4 chatbot that elicits detailed, contextual reflections; and FeedbackAnalyzer, a dashboard that synthesizes student responses into actionable insights for instructors. A pilot study across two graduate courses at UC Santa Cruz found that the system surfaced richer, more specific feedback than standard surveys, enabled real-time course adjustments, and was more engaging for students. The project is also investigating the system’s potential for tracking soft skills, including communication, collaboration, goal setting, and conflict resolution, in group work contexts.</p>
+
+              <div class="card-details" style="display:none; margin-top:1rem;">
+                <p>My contributions were centered on the case study: I recruited and interviewed student participants for the semi-structured interviews, and contributed to the analysis of interview transcripts to surface the study’s findings.</p>
+                <a href="https://doi.org/10.1145/3597503.3639139" class="card-link">Publication ↗</a>
+              </div>
+
+              <button class="card-link card-toggle" onclick="{
+                const details = this.previousElementSibling;
+                const isOpen = details.style.display === 'block';
+                details.style.display = isOpen ? 'none' : 'block';
+                this.textContent = isOpen ? 'Read more ↓' : 'Show less ↑';
+              }">Read more ↓</button>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card reveal">
+            <div class="card-thumb">
               <img src="images/d&s.png" alt="Day & Sea project">
             </div>
             <div class="card-body">
@@ -450,7 +475,7 @@
             </div>
           </article>
 
-          <!-- Project Card 2 -->
+          <!-- Project Card 3 -->
           <article class="project-card reveal">
             <div class="card-thumb">
               <img src="images/creativity_labs_logo.png" alt="Creativity Labs logo">
@@ -475,7 +500,7 @@
             </div>
           </article>
 
-          <!-- Project Card 3 -->
+          <!-- Project Card 4 -->
           <article class="project-card reveal">
             <div class="card-thumb">
               <img src="images/mario.gif" alt="Mario RL agent">
